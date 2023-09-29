@@ -1,0 +1,11 @@
+name: 'Excel to GeoJSON Converter'
+description: 'Converts Excel files or CSV to GeoJSON'
+author: 'Geolonia'
+inputs:
+  input_dir:
+    description: 'Input directory where Excel files are placed'
+    required: true
+    default: './'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
