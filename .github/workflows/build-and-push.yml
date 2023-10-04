@@ -1,0 +1,36 @@
+name: Build and Push
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run build
+      run: npm run build
+
+    - name: Commit and push
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git diff --exit-code --quiet || exit 0
+        git add -A
+        git commit -m "Build artifacts"
+        git push https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:${GITHUB_REF}
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
