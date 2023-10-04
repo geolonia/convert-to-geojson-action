@@ -26,8 +26,9 @@ jobs:
 
     - name: Commit and push
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git diff --exit-code --quiet || exit 0
         git add -A
         git commit -m "Build artifacts"
         git push https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD:${GITHUB_REF}
