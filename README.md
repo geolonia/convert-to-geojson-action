@@ -25,7 +25,7 @@ jobs:
       - name: 'Convert Excel to GeoJSON'
         uses: geolonia/excel-to-geojson-action@v0.0.1
         with:
-          input_dir: './data' # [Required] The directory containing the Excel files to convert.
+          input_dir: './' # [Required] The directory containing the Excel files to convert.
 ```
 
 ## Note
