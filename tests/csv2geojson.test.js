@@ -1,4 +1,3 @@
-
 const { excelToGeoJson } = require('../excel2geojson');
 const fs = require('fs');
 const expectedExcel = fs.readFileSync('./tests/fixtures/expected/excel-example.json', 'utf-8');

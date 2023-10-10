@@ -1,4 +1,3 @@
-
 const core = require('@actions/core');
 const { ConversionError } = require('./error');
 const { excelToGeoJson } = require('./excel2geojson');

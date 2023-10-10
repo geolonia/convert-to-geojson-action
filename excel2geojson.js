@@ -1,4 +1,3 @@
-
 const core = require('@actions/core');
 const { excel2csv } = require('./excel2csv');
 const { writeFile, readFile } = require('fs/promises');
