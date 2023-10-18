@@ -1,4 +1,4 @@
-name: 'Convert Excel/CSV to GeoJSON'
+name: 'Convert to GeoJSON'
 description: 'Converts Excel files or CSV to GeoJSON'
 author: 'Geolonia'
 branding:
