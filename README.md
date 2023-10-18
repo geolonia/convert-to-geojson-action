@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 'Convert Excel to GeoJSON'
-        uses: geolonia/convert-to-geojson@v0.0.1
+        uses: geolonia/convert-to-geojson-action@v0.0.1
         with:
           input_dir: './' # [Required] The directory containing the Excel files to convert.
 ```
@@ -35,8 +35,8 @@ jobs:
 ## Development
 
 ```
-$ git clone git@github.com:geolonia/convert-to-geojson.git
-$ cd convert-to-geojson
+$ git clone git@github.com:geolonia/convert-to-geojson-action.git
+$ cd convert-to-geojson-action
 $ npm install
 ```
 
