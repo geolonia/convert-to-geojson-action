@@ -1,6 +1,9 @@
-name: 'Excel to GeoJSON Converter'
+name: 'Convert Excel/CSV to GeoJSON'
 description: 'Converts Excel files or CSV to GeoJSON'
 author: 'Geolonia'
+branding:
+  icon: 'file-text'
+  color: 'orange'
 inputs:
   input_dir:
     description: 'Input directory where Excel files are placed'
