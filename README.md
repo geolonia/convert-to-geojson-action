@@ -1,4 +1,4 @@
-# Excel to GeoJSON Action
+# Convert Excel/CSV to GeoJSON Action
 
 This action converts an Excel / CSV file to a GeoJSON.
 
