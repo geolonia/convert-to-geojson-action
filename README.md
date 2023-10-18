@@ -29,6 +29,7 @@ jobs:
 ```
 
 ## Note
+* Output file name is the same as the input file name, and the extension is changed to `.json`. For example, `data.xlsx` is converted to `data.json`. But data structure is GeoJSON.
 * Values output as GeoJSON property will be the values specified in the Excel cell format.
 * For dates (cell format: date, user-defined), the values are output to GeoJSON property in `m/d/yy` format.
 
